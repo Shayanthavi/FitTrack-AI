@@ -3,66 +3,8 @@ import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
 import { FaRunning, FaBed, FaAppleAlt, FaChartLine, FaBrain, FaShieldAlt } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
-
-// Inline Lottie animation data for fitness (lightweight)
-const fitnessAnimation = {
-  v: "5.7.4",
-  fr: 30,
-  ip: 0,
-  op: 60,
-  w: 500,
-  h: 500,
-  nm: "Fitness",
-  ddd: 0,
-  assets: [],
-  layers: [
-    {
-      ddd: 0,
-      ind: 1,
-      ty: 4,
-      nm: "Circle",
-      sr: 1,
-      ks: {
-        o: { a: 0, k: 100 },
-        r: { a: 1, k: [{ t: 0, s: [0], e: [360] }, { t: 60 }] },
-        p: { a: 0, k: [250, 250] },
-        a: { a: 0, k: [0, 0] },
-        s: { a: 0, k: [100, 100] }
-      },
-      ao: 0,
-      shapes: [
-        {
-          ty: "gr",
-          it: [
-            {
-              ty: "el",
-              s: { a: 0, k: [200, 200] },
-              p: { a: 0, k: [0, 0] }
-            },
-            {
-              ty: "st",
-              c: { a: 0, k: [0.388, 0.4, 0.945, 1] },
-              o: { a: 0, k: 100 },
-              w: { a: 0, k: 8 }
-            },
-            {
-              ty: "tr",
-              p: { a: 0, k: [0, 0] },
-              a: { a: 0, k: [0, 0] },
-              s: { a: 0, k: [100, 100] },
-              r: { a: 0, k: 0 },
-              o: { a: 0, k: 100 }
-            }
-          ]
-        }
-      ],
-      ip: 0,
-      op: 60,
-      st: 0
-    }
-  ]
-};
-
+import { fitnessLottie } from '../assets/fitnessLottie';
+// Lottie web component script (add to public/index.html if not already present)
 const LandingPage = () => {
   const features = [
     {
@@ -177,13 +119,17 @@ const LandingPage = () => {
               transition={{ duration: 0.8 }}
               className="flex justify-center"
             >
-              <div className="relative w-full max-w-md">
-                <div className="absolute inset-0 bg-gradient-to-r from-fitness-primary/20 to-fitness-secondary/20 rounded-full blur-3xl"></div>
-                <Lottie
-                  animationData={fitnessAnimation}
-                  loop={true}
-                  className="relative z-10"
-                />
+              <div className="relative w-full flex justify-center items-center aspect-square">
+                <div className="absolute inset-0 bg-gradient-to-r from-fitness-primary/20 to-fitness-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+                <div className="relative z-10 w-full h-auto aspect-square flex items-center justify-center">
+                  <Lottie
+                    animationData={fitnessLottie}
+                    loop={true}
+                    autoplay={true}
+                    style={{ width: '100%', height: '100%', maxWidth: '100%', maxHeight: '100%' }}
+                    rendererSettings={{ preserveAspectRatio: 'xMidYMid meet' }}
+                  />
+                </div>
               </div>
             </motion.div>
           </div>
