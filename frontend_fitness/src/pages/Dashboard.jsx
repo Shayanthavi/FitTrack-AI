@@ -246,7 +246,7 @@ const Dashboard = () => {
                       onChange={handleChange}
                       required
                       min="0"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fitness-primary focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fitness-primary focus:border-transparent transition-all text-gray-900 placeholder-gray-500"
                       placeholder="e.g., 8000"
                     />
                     <span className="text-xs text-gray-400">How many steps did you walk today?</span>
@@ -264,7 +264,7 @@ const Dashboard = () => {
                       min="0"
                       max="24"
                       step="0.5"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fitness-primary focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fitness-primary focus:border-transparent transition-all text-gray-900 placeholder-gray-500"
                       placeholder="e.g., 7.5"
                     />
                     <span className="text-xs text-gray-400">Total hours of sleep last night</span>
@@ -280,7 +280,7 @@ const Dashboard = () => {
                       onChange={handleChange}
                       required
                       min="0"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fitness-primary focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-fitness-primary focus:border-transparent transition-all text-gray-900 placeholder-gray-500"
                       placeholder="e.g., 2000"
                     />
                     <span className="text-xs text-gray-400">Calories consumed today</span>
